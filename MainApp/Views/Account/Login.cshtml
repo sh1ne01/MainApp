@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+<div class="d-flex justify-content-center align-items-center" style="min-height: 70vh;">
+    <div class="card p-4" style="width: 400px;">
+        <h2 class="text-center mb-4">Login</h2>
+
+        @if (ViewBag.Error != null)
+        {
+            <div class="alert alert-danger">@ViewBag.Error</div>
+        }
+
+        <form method="post">
+            <div class="mb-3">
+                <input name="login" class="form-control" placeholder="Login" required />
+            </div>
+            <div class="mb-3">
+                <input name="password" type="password" class="form-control" placeholder="Password" required />
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+        <p class="mt-3 text-center">
+            Don't have an account? <a href="/Account/Register">Register</a>
+        </p>
+    </div>
+</div>

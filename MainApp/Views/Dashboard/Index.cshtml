@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="d-flex justify-content-center align-items-center" style="min-height: 70vh;">
+    <div class="card p-5" style="width: 600px; text-align:center;">
+        <h1 class="mb-3" style="color:#00ff88;">Welcome, @User.Identity.Name!</h1>
+        <p style="color:#b6ffb6;">You're logged in. This is your dashboard.</p>
+
+        <div class="d-flex justify-content-center gap-3 mt-4">
+            <a href="/Account/Logout" class="btn btn-primary">Logout</a>
+            <a href="/Purchase/Index" class="btn btn-success">Buy Premium</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,75 @@
+﻿@model User
+
+<div class="container mt-5">
+    <div class="card bg-dark text-light p-4 shadow">
+
+        <h2 style="color:#00ff88;">My Profile</h2>
+        <hr />
+
+        <div class="text-center mb-4">
+            @if (!string.IsNullOrEmpty(Model.AvatarPath))
+            {
+                <img src="@Model.AvatarPath"
+                     style="width:150px; height:150px; border-radius:50%; object-fit:cover;" />
+            }
+            else
+            {
+                <img src="/images/default-avatar.png"
+                     style="width:150px; height:150px; border-radius:50%;" />
+            }
+        </div>
+
+        <form asp-action="UploadAvatar"
+              method="post"
+              enctype="multipart/form-data">
+
+            <div class="mb-3">
+                <input type="file" name="avatar"
+                       class="form-control bg-black text-light"
+                       required />
+            </div>
+
+            <button class="btn btn-success">
+                Upload Avatar
+            </button>
+        </form>
+
+        <div class="mb-3">
+            <strong>Login:</strong> @Model.Login
+        </div>
+
+        <div class="mb-3">
+            <strong>Role:</strong>
+            <span style="color:#00ff88;">@Model.Role</span>
+        </div>
+
+        <div class="mb-3">
+            <strong>Status:</strong>
+            @if (Model.IsBanned)
+            {
+                <span style="color:red;">Banned</span>
+            }
+            else
+            {
+                <span style="color:#00ff88;">Active</span>
+            }
+        </div>
+
+        <hr />
+
+        <h4 style="color:#00ff88;">Change Password</h4>
+
+        <form asp-action="ChangePassword" method="post">
+            <div class="mb-3">
+                <input type="password" name="newPassword"
+                       class="form-control bg-black text-light"
+                       placeholder="New Password" required />
+            </div>
+
+            <button class="btn btn-success">
+                Update Password
+            </button>
+        </form>
+
+    </div>
+</div>

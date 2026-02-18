@@ -1,0 +1,48 @@
+﻿@model IEnumerable<User>
+
+<h2 style="color:#00ff88;">Admin Panel</h2>
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>Login</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Action</th>
+            <th>GivePrem</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Login</td>
+                <td>@user.Role</td>
+                <td>
+                    @if (user.IsBanned)
+                    {
+                        <span style="color:red;">Banned</span>
+                    }
+                    else
+                    {
+                        <span style="color:#00ff88;">Active</span>
+                    }
+                </td>
+                <td>
+                    <a asp-action="ToggleBan"
+                       asp-route-login="@user.Login"
+                       class="btn btn-sm btn-danger">
+                        Toggle Ban
+                    </a>
+                </td>
+                <td>
+                    <a asp-action="TogglePrem"
+                       asp-route-login="@user.Login"
+                       class="btn btn-primary">
+                        Toggle Prem
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

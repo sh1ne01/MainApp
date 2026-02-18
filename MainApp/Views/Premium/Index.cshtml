@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Premium";
+}
+
+<div class="d-flex justify-content-center align-items-center" style="min-height: 70vh;">
+    <div class="card p-5" style="width: 900px; text-align:center;">
+        <h1 class="mb-3" style="color:#00ff88;">Welcome, @User.Identity.Name!</h1>
+        <p style="color:#b6ffb6;">Thank you for using our product!Hope you enjoy!.</p>
+
+        <div class="d-flex justify-content-center gap-3 mt-4">
+            <a href="/Account/Logout" class="btn btn-primary">Logout</a>
+            <a href="/Premium/DownloadFile" class="btn btn-primary">Download</a>
+            <a href="/Forum/Download" class="btn btn-primary">Forum</a>
+        </div>
+    </div>
+</div>

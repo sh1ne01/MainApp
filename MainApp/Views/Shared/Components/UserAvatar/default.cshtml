@@ -1,0 +1,19 @@
+﻿@model MainApp.User
+
+@if (Model != null)
+{
+    <div class="d-flex align-items-center">
+
+        <img src="@(Model.AvatarPath ?? "/images/default-avatar.png")"
+             style="width:35px; height:35px;
+                    border-radius:50%;
+                    object-fit:cover;
+                    margin-right:10px;" />
+
+        <a class="nav-link text-success"
+           asp-controller="Profile"
+           asp-action="Index">
+            @Model.Login
+        </a>
+    </div>
+}
