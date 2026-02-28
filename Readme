@@ -1,0 +1,65 @@
+MainApp
+
+CheatClient is a custom client application developed as a personal project to explore client-side modification, networking interaction, and software architecture concepts.
+
+📌 Description
+
+MainApp is designed as a modular client that demonstrates how custom features and extended functionality can be integrated into an existing environment.
+The project focuses on performance, flexibility, and clean code structure.
+
+⚙️ Features
+
+Modular architecture
+
+Custom client-side functionality
+
+Configuration system
+
+Optimized performance handling
+
+User-friendly interface
+
+Expandable feature system
+
+🛠️ Technologies Used
+
+C#
+
+.NET
+
+Object-Oriented Programming (OOP)
+
+Client-side architecture principles
+
+🎯 Purpose
+
+This project was created for:
+
+learning purposes
+
+improving programming skills
+
+understanding client modification logic
+
+experimenting with software design patterns
+
+🚀 Installation
+
+Clone the repository:
+
+git clone https://github.com/sh1ne01/MainApp.git
+
+Open the solution in Visual Studio.
+
+Build the project.
+
+Run the client.
+
+⚠️ Disclaimer
+
+This project was created strictly for educational and research purposes.
+The author does not promote or encourage unfair advantage or misuse of software.
+
+👨‍💻 Author
+
+Developed by Sh1ne01
